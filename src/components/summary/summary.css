@@ -1,0 +1,109 @@
+.summary {
+    background-color: rgb(255, 252, 247);
+    height: 380px;
+    width: 400px;
+    border-radius: 15px;
+    padding: 25px;
+    transition: 0.2s ease;
+}
+.summaryTop span {
+    color: rgb(57, 33, 19);
+    font-size: 24px;
+    font-weight: 700;
+    transition: 0.2s ease;
+}
+.summaryMid {
+    display: flex;
+    justify-content: space-between;
+    height: 200px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding-bottom: 20px;
+}
+.thisWeek {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+}
+.filled {
+    /* background-color: rgb(236, 117, 93); */
+    border-radius: 5px;
+    width: 38px;
+    cursor: pointer;
+    position: relative;
+    transition: 0.2s ease;
+}
+.filled:hover {
+    filter: brightness(115%);
+}
+.filled:hover::after {
+    content: attr(data-amount);
+    width: fit-content;
+    border-radius: 5px;
+    background-color: rgb(57, 33, 19);
+    color: white;
+    position: absolute;
+    font-size: 14px;
+    padding: 5px;
+    top: -30px;
+    text-align: center;
+    align-self: center;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.day {
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 12px;
+}
+.summaryBot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+.summaryBotLeft {
+    display: flex;
+    flex-direction: column;
+}
+.totalMonth {
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.5);
+}
+.totalMonthDollar {
+    font-size: 36px;
+    font-weight: 700;
+    color: rgb(57, 33, 19);
+}
+.summaryBotRight {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.summaryBotRight span:first-of-type{
+    font-size: 14px;
+    font-weight: 700;
+    color: rgb(57, 33, 19);
+}
+.summaryBotRight span:last-of-type{
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width:425px) {
+    .summary{
+        width: 100%;
+        transition: 0.2s ease;
+    }
+    .filled {
+        width: 30px;
+        transition: 0.2s ease;
+    }
+    .summaryTop span {
+        font-size: 20px;
+        transition: 0.2s ease;
+}
+}

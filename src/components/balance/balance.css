@@ -1,0 +1,40 @@
+.balance {
+    background-color: rgb(236, 117, 93);
+    width: 400px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px;
+    border-radius: 15px;
+    transition: 0.2s ease;
+}
+.balanceLeft {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    justify-content: space-between;
+    gap: 10px;
+}
+.balanceLeft span:first-of-type{
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.75);
+}
+.balanceLeft span:last-of-type{
+    font-weight: 700;
+    font-size: 22px;
+}
+.balanceRight img{
+ width: 50px;
+}
+
+@media (max-width:425px) {
+    .AppContent {
+        width: 90%;
+        transition: 0.2s ease;
+    }
+    .balance {
+        width: 100%;
+        transition: 0.2s ease;
+    }
+}
